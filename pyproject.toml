@@ -1,0 +1,23 @@
+[project]
+name = "event_tracker"
+version = "0.1.0"
+description = "event-tracker using crewAI"
+authors = [{ name = "Philip Egger", email = "philip.egger.1987@gmail.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+event_tracker = "event_tracker.main:run"
+run_crew = "event_tracker.main:run"
+train = "event_tracker.main:train"
+replay = "event_tracker.main:replay"
+test = "event_tracker.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

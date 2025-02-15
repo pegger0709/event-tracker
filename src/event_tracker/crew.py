@@ -8,12 +8,14 @@ from crewai.project import CrewBase, agent, crew, task
 @CrewBase
 class EventTracker():
 	"""EventTracker crew"""
-
+		
+	# If you want to use a different configuration file,
 	# Learn more about YAML configuration files here:
 	# Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
 	# Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
 	agents_config = 'config/agents.yaml'
 	tasks_config = 'config/tasks.yaml'
+	
 
 	# If you would like to add tools to your agents, you can learn more about it here:
 	# https://docs.crewai.com/concepts/agents#agent-tools
@@ -44,7 +46,7 @@ class EventTracker():
 	def reporting_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
+			#output_file="report.md"
 		)
 
 	@crew

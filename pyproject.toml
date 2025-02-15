@@ -5,7 +5,8 @@ description = "event-tracker using crewAI"
 authors = [{ name = "Philip Egger", email = "philip.egger.1987@gmail.com" }]
 requires-python = ">=3.10,<3.13"
 dependencies = [
-    "crewai[tools]>=0.102.0,<1.0.0"
+    "crewai[tools]>=0.102.0,<1.0.0",
+    "pytest>=7.0.0"
 ]
 
 [project.scripts]
@@ -21,3 +22,6 @@ build-backend = "hatchling.build"
 
 [tool.crewai]
 type = "crew"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

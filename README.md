@@ -21,7 +21,7 @@ This AI tool automatically compiles a list of events occurring in the near futur
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/event-tracker.git
+git clone https://github.com/pegger0709/event-tracker.git
 cd event-tracker
 ```
 
